@@ -32,7 +32,7 @@ with open("data.csv", "w", encoding="utf8") as file:
             # there can be description of more than one project in the details field
             numOfDetails = len(project["details"])
             details = project["details"]
-            required_fields2 = ["TotalReqdStudents", "PBDescription"]
+
             for j in range(numOfDetails):
                 projectId = details[j].get("ProjectId")
                 if projectId not in seen:
