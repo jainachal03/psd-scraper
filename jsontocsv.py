@@ -1,4 +1,5 @@
 import json
+from utils import cfg
 
 full_data = open("full.json", "r")
 data = full_data.read()
@@ -27,7 +28,7 @@ with open("data.csv", "w", encoding="utf8") as file:
         seen = set()  # set to maintain the seen projectid's.
         for i in range(totalProjects):
             project = projects[i]
-            if project.get("BatchName") != "2022-2023 / SEM-I":
+            if project.get("BatchName") != cfg["sem"]:
                 continue
             # there can be description of more than one project in the details field
             numOfDetails = len(project["details"])
@@ -49,7 +50,7 @@ with open("data.csv", "w", encoding="utf8") as file:
                 else:
                     pass
 
-            if project.get("BatchName") != "2022-2023 / SEM-I":
+            if project.get("BatchName") != cfg["sem"]:
                 continue
 
         file.write(string)
