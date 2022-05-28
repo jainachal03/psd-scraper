@@ -6,7 +6,7 @@ In order to execute this
 
 Clone the repo
 
-create a config.json file by copying the contents from sample_config.json file and updating the email and password fields
+create a config.json file by copying the contents from sample_config.json file and updating the email and password fields. Also take note of the sem attribute. Change the sem attribute accordingly with proper spacing depending on the year and semester you are going for PS2
 
 run python psd_scrape.py
 
